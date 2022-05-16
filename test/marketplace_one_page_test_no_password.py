@@ -6,7 +6,7 @@ class SaveSearchDataTest(BaseTest):
     def test_group(self):
         marketplace_page = self.getMarketplace()
         marketplace_page.input_search(description="1")
-        marketplace_page.move_down_page(description="2", numbers=int(2))
+        marketplace_page.move_down_page(description="2", numbers=int(1))
         list_id = marketplace_page.get_list_id_href_ads(description="3")
         list_id_data = marketplace_page.get_list_data_id_list()
         marketplace_page.save_error(text= "find ads = "+str(len(list_id)))
