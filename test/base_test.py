@@ -1,8 +1,6 @@
 import unittest
 from selenium import webdriver
 from page.HomePage import HomePage
-from page.group_page import GroupPage
-from page.one_foto_page import OneFotoPage
 from page.marketplace_page import Marketplace
 import os
 from screen_recorder_sdk import screen_recorder
@@ -37,15 +35,6 @@ class BaseTest(unittest.TestCase):
         self.driver.close()
         if HomePage.NAME_SYSTEM:
             screen_recorder.stop_video_recording()
-
-    def getHomePage(self):
-        return HomePage(self.driver)
-
-    def getGroupPage(self):
-        return GroupPage(self.driver)
-
-    def getOneFotoPage(self):
-        return OneFotoPage(self.driver)
 
     def getMarketplace(self):
         return Marketplace(self.driver)
